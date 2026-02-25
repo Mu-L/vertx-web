@@ -146,8 +146,13 @@ public class WebClientConfig extends HttpClientConfig {
   }
 
   @Override
-  public WebClientConfig setSslOptions(ClientSSLOptions sslOptions) {
-    return (WebClientConfig) super.setSslOptions(sslOptions);
+  public WebClientConfig setKeepAliveTimeout(Duration keepAliveTimeout) {
+    return (WebClientConfig) super.setKeepAliveTimeout(keepAliveTimeout);
+  }
+
+  @Override
+  public WebClientConfig setVersions(HttpVersion... versions) {
+    return (WebClientConfig) super.setVersions(versions);
   }
 
   @Override
